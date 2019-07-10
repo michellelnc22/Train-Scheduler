@@ -34,12 +34,26 @@ $("#train-button").on("click", function (event) {
     console.log(newTrain.first);
     console.log(newTrain.frequency);
 
+    var row = document.createElement("tr");
+    //create name and add to row
+    var name = document.createElement("td");
+    name.textContent = newTrain.name;
+    row.appendChild(name);
 
-    $("#train-name").val("");
-    $("#destination").val("");
-    $("#first-train").val("");
-    $("#frequency").val("");
+    //create destination and add to row
+    var destination = document.createElement("td");
+    destination.textContent = newTrain.destination;
+    row.appendChild(destination);
 
+    var first = document.createElement("td"); 
+    first.textContent = newTrain.first; 
+    row.appendChild(first); 
+
+    var frequency = document.createElement("td"); 
+    frequency.textContent = newTrain.frequency; 
+    row.appendChild(frequency); 
+
+    $("#train-rows").append(row);
 
 });
 
