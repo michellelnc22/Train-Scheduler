@@ -35,12 +35,10 @@ $("#train-button").on("click", function (event) {
     console.log(newTrain.frequency);
 
     var row = document.createElement("tr");
-    //create name and add to row
     var name = document.createElement("td");
     name.textContent = newTrain.name;
     row.appendChild(name);
 
-    //create destination and add to row
     var destination = document.createElement("td");
     destination.textContent = newTrain.destination;
     row.appendChild(destination);
